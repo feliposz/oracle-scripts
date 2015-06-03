@@ -11,4 +11,4 @@ Uma coleção de alguns scripts úteis para Oracle em SQL e PL/SQL para uso diá
     * Or set the environment variables at control panel on Windows
 
 * SQL Developer:
-    * Go to menu Tools > Preferences, select Database > Worksheet, in "Select default path to look for scripts" enter: C:\path\to\scripts\
+    * Go to menu *Tools > Preferences*, select *Database > Worksheet*, in *Select default path to look for scripts* enter: `C:\path\to\scripts\`
