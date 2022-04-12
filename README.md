@@ -12,3 +12,41 @@ Uma coleção de alguns scripts úteis para Oracle em SQL e PL/SQL para uso diá
 
 * SQL Developer:
     * Go to menu *Tools > Preferences*, select *Database > Worksheet*, in *Select default path to look for scripts* enter: `C:\path\to\scripts\`
+
+## Help
+
+```
+Command           Description
+==============    ==============================================================
+@help             Displays this help screen
+@ascii            ASCII table for printable characters
+@d TABLENAME      Shortcut for describing table columns
+@date             Set date format to DD/MM/YYYY and show current date
+@datetime         Set date/time format to DD/MM/YYYY HH24:MI:SS and show current
+@exp TABLENAME    Generate an export script with INSERT commands for a given table
+@lsind TABLENAME  List index and columns for a given table
+@me               Display some information for current user session
+@me2              Display more detailed information for current user session
+@obj PATTERN      Search database object names by a given pattern
+@pkreset          Shortcut for dbms_session.reset_package
+@prompt           Set SQL*Plus based on current user and connection
+@ptbr             Set codepage to Latin-1 (1252) and NLS settings for Brazilian Portuguese
+@s TABLENAME      Shortcut for "select * from TABLENAME order by 1"
+@sid TABLENAME ID Shortcut for "select * from TABLENAME where id_TABLENAME = 'ID' order by 1"
+@search PATTERN   Search source code for a given text pattern (case insensitive)
+@spon             Begin spooling output to a new text file at temporary directory
+@spoff            Stop spooling and open generated file on default viewer/editor
+@spredo           Restart spooling to same file if interrupted
+@tron             Enable autotrace, explain plan
+@troff            Disable autotrace
+@warn             Enable PL/SQL warnings
+@warnoff          Disable PL/SQL warnings
+
+Edit these scripts for custom settings
+
+Scripts           Description
+==============    ==============================================================
+default.sql       Set default value for SQL*Plus configuration
+login.sql         Script that runs automatically at login
+sid.sql           Edit if most of your tables use just ID or TABLENAME_ID as primary key
+```

@@ -1,5 +1,10 @@
 SET VERIFY OFF;
-UNDEF table_name
+col INDEX_OWNER     format a20
+col INDEX_NAME      format a30
+col TABLE_OWNER     format a20
+col TABLE_NAME      format a30
+col COLUMN_NAME     format a30
+col DESCEND         format a10
 
 SELECT table_owner,
        table_name,
@@ -11,7 +16,7 @@ SELECT table_owner,
        char_length,
        descend
 FROM all_ind_columns
-WHERE table_name LIKE UPPER('%&table_name%')
+WHERE table_name LIKE UPPER('%&1%')
 ORDER BY
       table_owner,
       table_name,
@@ -19,4 +24,9 @@ ORDER BY
       index_name,
       column_position;
 
-UNDEF table_name
+col INDEX_OWNER     clear
+col INDEX_NAME      clear
+col TABLE_OWNER     clear
+col TABLE_NAME      clear
+col COLUMN_NAME     clear
+col DESCEND         clear

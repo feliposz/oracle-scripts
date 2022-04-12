@@ -1,13 +1,15 @@
 SET DEFINE "&"
-ACCEPT referenced_name PROMPT "Referenced name: "
-ACCEPT text PROMPT "Search text: "
+col owner format a20
+col name format a30
+col text format a100
 
 SELECT owner, name, line, text 
   FROM all_source 
- WHERE UPPER(text) LIKE UPPER('%&text%') 
-   AND name IN ( SELECT name FROM all_dependencies WHERE referenced_name = UPPER('&referenced_name') )
+ WHERE UPPER(text) LIKE UPPER('%&1%') 
  ORDER BY owner, name, line;
 PROMPT
 
-UNDEF referenced_name
-UNDEF text
+UNDEF 1
+col owner clear
+col name clear
+col text clear

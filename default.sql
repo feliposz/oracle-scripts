@@ -24,7 +24,7 @@ SET FLAGGER         OFF
 SET FLUSH           ON
 SET HEADING         ON
 SET HEADSEP         "|"
-SET LINESIZE        3000
+SET LINESIZE        200
 SET LOBOFFSET       1
 SET LOGSOURCE       ""
 SET LONG            80
