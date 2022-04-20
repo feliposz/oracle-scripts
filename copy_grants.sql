@@ -10,7 +10,7 @@ spool &vv_script
 prompt set termout off
 
 select 'GRANT ' || privilege || ' ON ' || table_name || ' TO ' || grantee || ';'
-  from dba_tab_privs
+  from all_tab_privs
  where grantor = upper('&1')
    and grantee = upper('&2');
 

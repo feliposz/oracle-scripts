@@ -9,3 +9,4 @@ ORDER BY owner, object_type, object_name;
 col owner clear
 col object_name clear
 col object_type clear
+undef 1
